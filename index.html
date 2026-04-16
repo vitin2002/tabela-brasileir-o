@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador Brasileirão 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo-site">
+        <div class="overlay">
+            <h1>BRASILEIRÃO 2026</h1>
+            <p>Simulação: Rodadas 11 a 13</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="coluna-tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Clube</th>
+                        <th>P</th>
+                        <th>V</th>
+                        <th>E</th>
+                        <th>D</th>
+                        <th>SG</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-corpo"></tbody>
+            </table>
+        </section>
+
+        <section class="coluna-jogos">
+            <div class="seletor-rodada">
+                <label>Selecione a Rodada:</label>
+                <select id="select-rodada" onchange="mudarRodada()"></select>
+            </div>
+            <div id="lista-jogos"></div>
+            <button class="btn-acao" onclick="processarRodada()">Simular Resultados</button>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
